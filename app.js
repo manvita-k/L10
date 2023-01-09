@@ -1,5 +1,5 @@
 const express = require("express"); //importing express
-var csrf = require("tiny-csrf");
+var csrf = require("tiny-csrf");    //get method
 const app = express(); // creating new application
 const bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
@@ -28,7 +28,7 @@ app.use(
   session({
     secret: "my-super-secret-key-21728172615261562",
     cookie: {
-      maxAge: 24 * 60 * 60 * 1000, //24hours
+      maxAge: 24 * 60 * 60 * 1000, //max age
     },
   })
 );
